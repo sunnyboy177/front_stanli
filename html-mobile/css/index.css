@@ -9,7 +9,6 @@ html{
 .contanier{
 	width: 7.5rem;
 	height: auto;
-	padding-bottom: .98rem;
 }
 .wrap{
 	width: 7.5rem;
@@ -29,8 +28,16 @@ html{
 	background: url(../images/yz-bg-2.jpg) no-repeat 0 0;
 	background-size: 7.5rem;
 }
-.wrap.yz-3{
+.wrap.lm-1{
+	background: url(../images/lm-bg-1.jpg) no-repeat 0 0;
+	background-size: 7.5rem;
+}
+.wrap.yz-3,.wrap.lm-2{
 	background: #000;
+	padding-bottom: .98rem;
+}
+.wrap.lm-2{
+	padding-bottom: 0;
 }
 .common-nav{
 	width: inherit;
@@ -310,4 +317,117 @@ html{
 }
 .yz-3-picitem img{
 	width: 2.14rem;
+}
+/** lm-1 */
+.lm-1-content{
+	width: 6.4rem;
+	height: auto;
+	margin:0 auto;
+}
+.lm-1-header{
+	width: inherit;
+	height: .82rem;
+	padding-top: .66rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.lm-1-title{
+	width: 4.58rem;
+	height: inherit;
+	background: url(../images/lm-1-title.png) no-repeat 0 0;
+	background-size: 2.87rem;
+	margin-left: .35rem;
+}
+.lm-1-homebtn{
+	width: .5rem;
+	height: .48rem;
+	background:url(../images/home-btn.png) no-repeat 0 0;
+	background-size: .5rem;
+}
+.lm-1-homebtn a{
+	display: block;
+	width: inherit;
+	height: inherit;
+}
+.lm-1-people{
+	width: inherit;
+	height: auto;
+}
+.lm-1-people-item{
+	width: 2.92rem;
+	height: 4.12rem;
+	background: #000;
+	overflow: hidden;
+	margin-left: .22rem;
+	float: left;
+	margin-top: .4rem;
+}
+.lm-1-people-img{
+	width: inherit;
+	height: 2.91rem;
+}
+.lm-1-people-name,.lm-1-people-intro{
+	width: inherit;
+	text-align: center;
+	font-size: .22rem;
+}
+.lm-1-people-name{
+	font-size: .3rem;
+	font-weight: bold;
+	line-height: .5rem;
+}
+.wrap .lm-2{
+
+}
+.wrap.lm-2 p{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	font-size: .24rem;
+}
+.wrap.lm-2 h6{
+	width: 6.4rem;
+	margin:0 auto;
+	line-height: .4rem;
+}
+.lm-2-line-1{
+	padding-top: 1.18rem;
+}
+.lm-2-line-2{
+	margin-top: .56rem;
+}
+.lm-2-line-3{
+	margin-top: .7rem;
+}
+.lm-2-line-4{
+	margin-top: .7rem;
+}
+.lm-2-line-5{
+	margin: 1.16rem auto 0;
+	width: 6.4rem;
+	height: .01rem;
+	background: #fff;
+}
+.wrap.lm-2 h6.lm-2-line-margin{
+	margin-top: .2rem;
+}
+.lm-2-logo-1{
+	height: .7rem;
+}
+.lm-2-logo-2{
+	height: .85rem;
+}
+.lm-2-logo-3{
+	height: 1.4rem;
+}
+.lm-2-logo-4{
+	height: .88rem;
+}
+.lm-2-logo-5{
+	height: 1.52rem;
+}
+.lm-2-logo-6{
+	height: 1.45rem;
 }
