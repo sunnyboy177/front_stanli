@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>斯坦·李动漫宇宙</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+	<meta name="screen-orientation" content="portrait" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="full-screen" content="yes">
+	<meta name="x5-fullscreen" content="true">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+<body>
+	<div class="contanier">
+		<div class="wrap txz-1">
+			<div class="txz-1-content">
+				<div class="txz-1-header">
+					<div class="txz-1-title"></div>
+					<div class="txz-1-homebtn">
+						<a href="#"></a>
+					</div>
+				</div>
+				<div class="txz-1-tickets"> 
+					<!-- url里面填写背景图片路径 data-url 填浮层图片路径-->
+					<div class="txz-1-item" style="background: url();background-size: cover;" data-url="1">
+						<p class="txz-1-ticket-name">Limited Offer </p>	
+						<p class="txz-1-ticket-price">From RMB88</p>
+						<p class="txz-1-ticket-time">Limited Offer on Aug. 1st </p>
+					</div>
+					<div class="txz-1-item" style="background: url();background-size: cover;" data-url="2">
+						<p class="txz-1-ticket-name">One-day Pass</p>	
+						<p class="txz-1-ticket-price">From RMB138</p>
+						<p class="txz-1-ticket-time">Pre-sale period: Aug. 8th </p>
+					</div>
+					<div class="txz-1-item" style="background: url();background-size: cover;" data-url="3">
+						<p class="txz-1-ticket-name">Three-days Pass</p>	
+						<p class="txz-1-ticket-price">RMB328</p>
+						<p class="txz-1-ticket-time">Enjoy yourself during the 3-day National Holiday!</p>
+					</div>
+					<div class="txz-1-item" style="background: url();background-size: cover;" data-url="4">
+						<p class="txz-1-ticket-name">Gift package of universal transformers</p>	
+						<p class="txz-1-ticket-price">RMB428/p>
+						<p class="txz-1-ticket-time">““Little” Bumblebee, transform and roll out!</p>
+					</div>
+					<div class="txz-1-item" style="background: url();background-size: cover;" data-url="5">
+						<p class="txz-1-ticket-name">Unlimited universal transformers </p>	
+						<p class="txz-1-ticket-price">RMB1188</p>
+						<p class="txz-1-ticket-time">Limited edition of comic merchandise!</p>
+					</div>
+				</div>
+				<div class="txz-1-buyticket">
+					<p class="txz-1-buy-title">Scan the QR code on the right to buy tickets / long press the QR code on the right to buy tickets </p>
+					<div class="tx-1-buy-qrcode">
+						<img src="./images/qrcode-1.png" alt="">
+						<img src="./images/qrcode-2.png" alt="">
+						<a href="##"><img src="./images/txz-buy-btn.png" alt=""></a>
+					</div>
+					<p class="txz-1-buy-desc">※ The animation derivatives and catering in the exhibition are sold separately and charged separately from the tickets.
+</p>
+				</div>
+			</div>
+		</div>
+		<div class="txz-mask" style="display: none;">
+			<div class="txz-mask-content">
+				<img src="">
+			</div>
+		</div>
+		<ul class="common-nav">
+			<li class="nav-yz"><a href="#"><img src="./images/nav-yz-icon.png" alt=""></a></li>
+			<li class="nav-lm"><a href="#"><img src="./images/nav-lm-icon.png" alt=""></a></li>
+			<li class="nav-zn"><a href="#"><img src="./images/nav-zn-icon.png" alt=""></a></li>
+			<li class="nav-txz"><a href="#"><img src="./images/nav-txz-icon-active.png" alt=""></a></li>
+			<li class="nav-dsj"><a href="#"><img src="./images/nav-dsj-icon.png" alt=""></a></li>
+		</ul>
+	</div>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript">
+	$('.txz-1-item').on('click',function () {
+		var url = $(this).attr('data-url')
+		$('.txz-mask').toggle()
+		$('.txz-mask-content img').attr("src", url)
+	})
+	$('.txz-mask').on('click', function () {
+		$(this).hide()
+	})
+</script>
+</body>
+</html>

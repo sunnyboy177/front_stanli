@@ -33,9 +33,11 @@
 				<div class="yz-2-intro">
 					<p> “斯坦·李动漫宇宙展”——前身是洛杉矶市首个多媒体流行文化盛会的“斯坦·李洛杉矶动漫展（Stan Lee’s Los Angeles Comic Con）”，由斯坦·李与其娱乐公司POW！Entertainment于2011年联合发起，该漫展如今已经发展成美国三大漫展之一，成为漫迷的“朝圣”之地。</p>
 					<p>今年的斯坦·李（上海）动漫宇宙展是中国版的“斯坦·李洛杉矶动漫展”，该展将于2018年10月登陆上海世博展览馆，也是斯坦·李在中国举办的首个漫展，将延续洛杉矶的“动漫泛娱乐”理念，为中国的漫迷群体打造一个世界级的动漫狂欢节。</p>
+					<p>2018年10月1日至3日	</p>
+					<p>中国·上海·世博展览馆</p>
 				</div>
 			</div>
-			<div class="yz-2-video"></div>
+			<div id="yz-2-video" class="yz-2-video"></div>
 		</div>
 		<div class="wrap yz-3">
 			<div class="yz-3-content">
@@ -48,18 +50,23 @@
 			<div class="yz-3-history">
 				<div class="yz-3-history-title">往届精彩回顾</div>
 				<div class="yz-3-pics">
-					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;"></div>
-					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;"></div>
-					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;"></div>
-					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;"></div>
-					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;"></div>
-					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;"></div>
-					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;"></div>
-					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;"></div>
-					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;"></div>
-					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;"></div>
-					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;"></div>
+					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;" data-url="./src/1.jpg"></div>
+					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;" data-url="./src/2.jpg"></div>
+					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;" data-url="./src/3.jpg"></div>
+					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;" data-url="./src/4.jpg"></div>
+					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;" data-url="./src/5.jpg"></div>
+					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;" data-url="./src/6.jpg"></div>
+					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;" data-url="./src/7.jpg"></div>
+					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;" data-url="./src/8.jpg"></div>
+					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;" data-url="./src/9.jpg"></div>
+					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;" data-url="./src/1.jpg"></div>
+					<div class="yz-3-picitem" style="background: url(./src/1.jpg) no-repeat; background-size: cover;" data-url="./src/1.jpg"></div>
 				</div>
+			</div>
+		</div>
+		<div class="txz-mask" style="display: none;">
+			<div class="yz-mask-content">
+				<img src="">
 			</div>
 		</div>
 		<ul class="common-nav">
@@ -71,5 +78,31 @@
 		</ul>
 	</div>
 <script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script src='https://vm.gtimg.cn/tencentvideo/txp/js/txplayer.js'></script>
+<script type="text/javascript">
+		var player = new Txplayer({
+			containerId: 'yz-2-video',
+			vid: 'r0018hmh1pa',
+			width: '598',
+			height: '336',
+			autoplay: false
+		});
+		var player1 = new Txplayer({
+			containerId: 'yz-3-video',
+			vid: 'r0018hmh1pa',
+			width: '598',
+			height: '336',
+			autoplay: false
+		});
+		$('.yz-3-picitem').on('click', function () {
+			var url = $(this).attr('data-url')
+			$('.txz-mask').toggle()
+			$('.yz-mask-content').css({'background':'url('+ url +')', 'background-size':'cover'})
+		})
+		$('.txz-mask').on('click', function () {
+			$(this).hide()
+		})
+</script>
 </body>
 </html>
