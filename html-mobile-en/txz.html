@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>斯坦·李动漫宇宙</title>
+	<title>Stan Lee’s Comic Universe</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
 	<meta name="screen-orientation" content="portrait" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -22,34 +22,34 @@
 				</div>
 				<div class="txz-1-tickets"> 
 					<!-- url里面填写背景图片路径 data-url 填浮层图片路径-->
-					<div class="txz-1-item" style="background: url();background-size: cover;" data-url="1">
+					<div class="txz-1-item black" style="background: url(./images/ticket-01.jpg);background-size: cover;" data-url="1">
 						<p class="txz-1-ticket-name">Limited Offer </p>	
 						<p class="txz-1-ticket-price">From RMB88</p>
 						<p class="txz-1-ticket-time">Limited Offer on Aug. 1st </p>
 					</div>
-					<div class="txz-1-item" style="background: url();background-size: cover;" data-url="2">
+					<div class="txz-1-item white" style="background: url(./images/ticket-02.jpg);background-size: cover;" data-url="2">
 						<p class="txz-1-ticket-name">One-day Pass</p>	
 						<p class="txz-1-ticket-price">From RMB138</p>
 						<p class="txz-1-ticket-time">Pre-sale period: Aug. 8th </p>
 					</div>
-					<div class="txz-1-item" style="background: url();background-size: cover;" data-url="3">
+					<div class="txz-1-item black" style="background: url(./images/ticket-03.jpg);background-size: cover;" data-url="3">
 						<p class="txz-1-ticket-name">Three-days Pass</p>	
 						<p class="txz-1-ticket-price">RMB328</p>
 						<p class="txz-1-ticket-time">Enjoy yourself during the 3-day National Holiday!</p>
 					</div>
-					<div class="txz-1-item" style="background: url();background-size: cover;" data-url="4">
+					<div class="txz-1-item white" style="background: url(./images/ticket-04.jpg);background-size: cover;" data-url="4">
 						<p class="txz-1-ticket-name">Gift package of universal transformers</p>	
-						<p class="txz-1-ticket-price">RMB428/p>
-						<p class="txz-1-ticket-time">““Little” Bumblebee, transform and roll out!</p>
+						<p class="txz-1-ticket-price">RMB428</p>
+						<p class="txz-1-ticket-time">“Little” Bumblebee, transform and roll out!</p>
 					</div>
-					<div class="txz-1-item" style="background: url();background-size: cover;" data-url="5">
+					<div class="txz-1-item white" style="background: url(./images/ticket-05.jpg);background-size: cover;" data-url="5">
 						<p class="txz-1-ticket-name">Unlimited universal transformers </p>	
 						<p class="txz-1-ticket-price">RMB1188</p>
 						<p class="txz-1-ticket-time">Limited edition of comic merchandise!</p>
 					</div>
 				</div>
 				<div class="txz-1-buyticket">
-					<p class="txz-1-buy-title">Scan the QR code on the right to buy tickets / long press the QR code on the right to buy tickets </p>
+					<p class="txz-1-buy-title">Long press the QR code on the right to buy tickets</p>
 					<div class="tx-1-buy-qrcode">
 						<img src="./images/qrcode-1.png" alt="">
 						<img src="./images/qrcode-2.png" alt="">
@@ -63,6 +63,7 @@
 		<div class="txz-mask" style="display: none;">
 			<div class="txz-mask-content">
 				<img src="">
+				<div class="txz-close-btn">×</div>
 			</div>
 		</div>
 		<ul class="common-nav">
@@ -83,6 +84,9 @@
 	})
 	$('.txz-mask').on('click', function () {
 		$(this).hide()
+	})
+	$('.txz-close-btn').on('click', function () {
+		$('.txz-mask').toggle()
 	})
 </script>
 </body>

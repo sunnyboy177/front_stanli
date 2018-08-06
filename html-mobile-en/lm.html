@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>斯坦·李动漫宇宙</title>
+	<title>Stan Lee’s Comic Universe</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
 	<meta name="screen-orientation" content="portrait" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -24,31 +24,30 @@
 					<div class="lm-1-people-item">
 						<div class="lm-1-people-img" style="background: url(./images/people-1.png) no-repeat; background-size: cover;">
 						</div>
-						<p class="lm-1-people-name">孙世前</p>
-						<p class="lm-1-people-intro">中国机器人艺术领军人物</p>
-						<p class="lm-1-people-intro">雕像大师</p>
+						<p class="lm-1-people-name">Mr. Sun Shiqian</p>
+						<p class="lm-1-people-intro">Leading artist of Mech concept in China,statue master</p>
 					</div>
 					<div class="lm-1-people-item">
 						<div class="lm-1-people-img" style="background: url(./images/people.png) no-repeat; background-size: cover;">
 						</div>
 						<p class="lm-1-people-name">Cynthia Martin</p>
-						<p class="lm-1-people-intro">漫威、DC御用原创</p>
-						<p class="lm-1-people-intro">漫画艺术家</p>
+						<p class="lm-1-people-intro">Courtly original cartoon artist in Marvel and DC</p>
 					</div>
 					<div class="lm-1-people-item">
 						<div class="lm-1-people-img" style="background: url(./images/people-3.png) no-repeat; background-size: cover;">
 						</div>
 						<p class="lm-1-people-name">Burton Morris</p>
-						<p class="lm-1-people-intro">著名当代波普艺术家</p>
+						<p class="lm-1-people-intro">Famous contemporary pop artist</p>
 					</div>
 					<div class="lm-1-people-item">
 						<div class="lm-1-people-img" style="background: url(./images/people-4.png) no-repeat; background-size: cover;">
 						</div>
-						<p class="lm-1-people-name">敬请期待！</p>
-						<p class="lm-1-people-intro">更多神秘嘉宾将陆续揭晓</p>
+						<p class="lm-1-people-name">Coming Soon!</p>
+						<p class="lm-1-people-intro">More mysterious guests will be announced</p>
 					</div>
 				</div>
 			</div>
+			<div class="dsj-next-btn flash animated"></div>
 		</div>
 		<div class="wrap lm-2">
 			<p class="lm-2-line-1"><img class="lm-2-logo-1" src="./images/logo-1.png"></p>
@@ -62,11 +61,11 @@
 				<img class="lm-2-logo-6" src="./images/logo-5.png">
 			</p>
 			<p class="lm-2-line-5"></p>
-			<h6 class="lm-2-line-margin">想要参展呈现精彩？</h6>
-			<h6>了解更多合作信息请联络：</h6>
-			<h6 class="lm-2-line-margin">李女士  电话：18601661787</h6>
-			<h6>孙女士  电话：18601661785</h6>
-			<h6>邮箱：lijia2018@shexpocenter.com</h6>
+			<h6 class="lm-2-line-margin">Want to experience wonderfully?</h6>
+			<h6>Contact Number for Cooperation:</h6>
+			<h6 class="lm-2-line-margin">Ms. Li     Cellphone: 18601661787</h6>
+			<h6>Ms. Sun   Cellphone: 18601661785</h6>
+			<h6>Email: lijia2018@shexpocenter.com</h6>
 		</div>
 		<ul class="common-nav">
 			<li class="nav-yz"><a href="#"><img src="./images/nav-yz-icon.png" alt=""></a></li>
@@ -77,5 +76,18 @@
 		</ul>
 	</div>
 <script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript">
+	window.addEventListener('DOMContentLoaded', function () {
+		var len = $('.lm-1-people-item').length
+			var maxHeight = $('.lm-1-people-item').eq(0).height()
+			for (var i = 0; i < len; i++) {
+				maxHeight = $('.lm-1-people-item').eq(i).height() > maxHeight ? $('.lm-1-people-item').eq(i).height() : maxHeight
+			}
+			var zoom = document.documentElement.style.fontSize.replace('px','')
+			$('.lm-1-people-item').css({'height':maxHeight/zoom+'rem'})
+	}, false)
+	
+</script>
 </body>
 </html>

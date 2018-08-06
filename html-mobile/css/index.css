@@ -9,23 +9,26 @@ html{
 .contanier{
 	width: 7.5rem;
 	height: auto;
+	margin:0 auto;
 }
 .wrap{
 	width: 7.5rem;
 	height: auto;
-	min-height: 13.34rem;
+	min-height: 12.34rem;
 	position: relative;
 }
 .wrap.index{
 	background: url(../images/index-bg.png) no-repeat 0 0;
 	background-size: 7.5rem;
+	min-height: 13.34rem;
+	margin: 0 auto;
 }
 .wrap.yz-1{
-	background: url(../images/yz-bg-1.jpg) no-repeat 0 0;
+	background: url(../images/yz-bg-1.jpg) repeat-y 0 0;
 	background-size: 7.5rem;
 }
 .wrap.yz-2{
-	background: url(../images/yz-bg-2.jpg) no-repeat 0 0;
+	background: url(../images/yz-bg-2.jpg) repeat-y 0 0;
 	background-size: 7.5rem;
 }
 .wrap.lm-1{
@@ -51,9 +54,10 @@ html{
 	background-repeat: no-repeat;
 	background-position: center 35%;
 	background-size: contain;
+	padding-bottom: .98rem;
 }
 .wrap.lm-2,.wrap.dsj-wrap{
-	padding-bottom: 0;
+	padding-bottom: .98rem;
 }
 .common-nav{
 	width: inherit;
@@ -62,11 +66,12 @@ html{
 	font-size: .2rem;
 	position: fixed;
 	bottom: 0;
-	left: 0;
+	left: 50%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
+	transform: translateX(-50%);
 }
 .common-nav li{
 	list-style: none;
@@ -252,13 +257,17 @@ html{
 }
 .yz-1-intro{
 	width: inherit;
-	height: 4.5rem;
+	height: auto;
 	overflow-y: auto;
 	font-size: .27rem;
 	margin-top: 5.83rem;
 }
 .yz-1-intro p{
+	font-size: .27rem;
 	text-indent: .54rem;
+}
+.yz-1-content .dsj-next-btn{
+	margin: 1.04rem auto 0;
 }
 /**yz-2**/
 .yz-2-content{
@@ -340,6 +349,7 @@ html{
 	width: 6.4rem;
 	height: auto;
 	margin:0 auto;
+	min-height: 10.5rem;
 }
 .lm-1-header{
 	width: inherit;
@@ -499,6 +509,9 @@ html{
 	height: auto;
 	margin-top: .6rem;
 }
+.zn-1 .dsj-next-btn{
+	margin-top: 3.5rem;
+}
 .zn-2-content{
 	width: 6.4rem;
 	height: auto;
@@ -579,6 +592,9 @@ html{
 	flex-direction: column;
 	justify-content: center;
 }
+.txz-1-item.black p,.txz-1-item.black p span{
+	color: #000;
+}
 .txz-1-ticket-name{
 	font-size: .34rem;
 	margin-left: .34rem;
@@ -645,9 +661,36 @@ html{
 	width: inherit;
 	height: 8.14rem;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
 }
 .yz-mask-content img{
 	width: inherit;
+}
+.yz-mask-prebtn,.yz-mask-nextbtn{
+	width: .31rem;
+	height: inherit;
+	background: url(../images/arrow.png) no-repeat 0 center;
+	background-size: .31rem;
+	cursor: pointer;
+	position: relative;
+	z-index: 1000;
+}
+.yz-mask-prebtn{
+	transform: rotate(180deg);
+}
+.yz-mask-closebtn{
+	width: .6rem;
+	height: .6rem;
+	font-size: .6rem;
+	position: absolute;
+	top: -.5rem;
+	right: 0rem;
+	line-height: .3rem;
+	text-align: center;
 }
 /**dsj-1**/
 .dsj-1-header{
@@ -665,7 +708,7 @@ html{
 	height: inherit;
 	background: url(../images/dsj-1-title.png) no-repeat 0 0;
 	background-size: 5.28rem;
-	margin-left: .95rem;
+	margin-left: .8rem;
 }
 .dsj-1-homebtn{
 	width: .5rem;
@@ -685,6 +728,9 @@ html{
 	margin: 0 auto;
 	margin-top: -.62rem;
 	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 .dsj-1-content{
 	background: url(../images/dsj-1-bg.png) no-repeat center center;
@@ -832,6 +878,7 @@ html{
 .dsj-5-content{
 	background: url(../images/dsj-5-bg.png) no-repeat center center;
 	background-size: 6.44rem;
+	text-align: justify;
 }
 .dsj-5-intro-1{
 	width: 5.14rem;
@@ -846,6 +893,7 @@ html{
 }
 .dsj-5-line-2{
 	margin-top: .74rem;
+	font-size: .28rem;
 }
 .dsj-next-btn{
 	width: 1.94rem;
@@ -854,3 +902,44 @@ html{
 	background: url(../images/dsj-next-btn.png) no-repeat center center;
 	background-size: 1.94rem;
 }
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+
+  25%,
+  75% {
+    opacity: .5;
+    transform: translateY(-5px);
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+.animated {
+	animation-iteration-count:infinite;
+	-webkit-animation-iteration-count:infinite;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
